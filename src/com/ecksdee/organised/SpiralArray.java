@@ -7,16 +7,14 @@ public class SpiralArray {
         int[][] ArrayInQuestion = GivenArray.UsersArray();
         int x = ArrayInQuestion[0].length;
         int y = ArrayInQuestion.length;
-        //int d = 0;
         int f = 1;
-       // int h = 2;
         List<Integer> list = new ArrayList<>();
         int k = list.size();
         //this is the first iteration only on the x axis
         for (int z: ArrayInQuestion[0]){
                list.add(z);
         }
-        //this loop executes until list's elements count equals array's number of elemends
+        //this loop executes until list's elements count equals array's number of elements
         while(true){
                 for (int newDown = f; newDown < y - (f-1); newDown++) {
                     if (CheckNumberOfElements(list.size(),x, y)) break;
@@ -35,9 +33,7 @@ public class SpiralArray {
                 list.add(ArrayInQuestion[f][newRight]);
             }
             if (CheckNumberOfElements(list.size(),x, y)) break;
-            //d++;
             f++;
-            //h++;
         }
     return list;
     }
