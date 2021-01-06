@@ -2,14 +2,15 @@ package com.ecksdee.organised;
 import java.util.ArrayList;
 import java.util.List;
 public class SpiralArray {
-    public static List<Integer> spiral() {
+    private int[][] ArrayInQuestion = GivenArray.UsersArray();
+    private int x = ArrayInQuestion[0].length;
+    private int y = ArrayInQuestion.length;
+    private int f = 1;
+    private List<Integer> list = new ArrayList<>();
+    private int k = list.size();
+    public List<Integer> spiral() {
         //this class processes the array
-        int[][] ArrayInQuestion = GivenArray.UsersArray();
-        int x = ArrayInQuestion[0].length;
-        int y = ArrayInQuestion.length;
-        int f = 1;
-        List<Integer> list = new ArrayList<>();
-        int k = list.size();
+
         //this is the first iteration only on the x axis
         for (int z: ArrayInQuestion[0]){
                list.add(z);
@@ -37,7 +38,7 @@ public class SpiralArray {
         }
     return list;
     }
-    public static boolean CheckNumberOfElements(int size, int x, int y){
+    private boolean CheckNumberOfElements(int size, int x, int y){
         return size >= x * y;
     }
 
